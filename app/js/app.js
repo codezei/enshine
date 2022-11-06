@@ -3,6 +3,8 @@
 
 document.addEventListener('DOMContentLoaded', () => {
 	// Custom JS
+
+	// аккордеон на станице Home и About
 	function accordionInit (list) {
 		let wrap = list
 		if (!wrap) {
@@ -18,6 +20,8 @@ document.addEventListener('DOMContentLoaded', () => {
 	}
 	accordionInit (document.querySelector('.accordion'))
 
+
+	// слайдер статей на странице Home
 	function blogPreviwSlider () {
 		let swiper = new Swiper(".blog-preview__slider", {
 			slidesPerView: 3,
@@ -39,6 +43,8 @@ document.addEventListener('DOMContentLoaded', () => {
 		  });
 	}
 	blogPreviwSlider ()
+
+	// мобильное меню
 	function mobMenuToggle () {
 		let btn = document.querySelector('.header__navigation-btn-menu')
 		let menu = document.querySelector(btn.dataset.toggle)
@@ -49,6 +55,8 @@ document.addEventListener('DOMContentLoaded', () => {
 	}
 	mobMenuToggle ()
 
+
+	// фильтрация по категориям на странице Blog
 	function blogCategoryToggle () {
 		let categories = document.querySelector('.blog__categories')
 		if (!categories) {
@@ -77,6 +85,31 @@ document.addEventListener('DOMContentLoaded', () => {
 			}
 		}
 	}
-
 	blogCategoryToggle ()
+
+
+	// функция появления попапа
+	function joinWaitlist (formSelector) {
+
+		let form = document.querySelector(formSelector)
+		if (!form) {
+			return
+		}
+		let popup = document.querySelector(form.dataset.popup)
+		form.addEventListener('submit', function (e) {
+			e.preventDefault();
+			
+			popup.classList.add('active')
+		})
+		popup.addEventListener('click', function (e) {
+			if (e.target.classList.contains('popup__btn')) {
+				e.currentTarget.classList.remove('active')
+			}
+		})
+	}
+	joinWaitlist ('.waitlist__form')
+
+
+
+
 })

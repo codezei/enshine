@@ -121,7 +121,7 @@
                     position: absolute;
                     left: 0;
                     top: 0;
-                    transform: translate(-50%, -50%);
+                    transform: translateX(-50%);
                     z-index: -1;
                 }
                 &:after {
@@ -135,7 +135,7 @@
                     background-repeat: no-repeat;
                     position: absolute;
                     right: 0;
-                    top: 0;
+                    bottom: 0;
                     transform: translateX(50%);
                     z-index: -1;
                 }

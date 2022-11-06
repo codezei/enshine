@@ -135,6 +135,23 @@ h1, h2, h3, h4, h5, h6 {
     border-radius: 8px;
     color: #565C62;
     font-weight: 400;
+    &.error {
+        border: 1px solid #B03944;
+        padding-right: 40px;
+        & + .error-message {
+            display: block;
+        }
+    }
+    &-wrap {
+        position: relative;
+    }
+}
+
+.error-message {
+    font-size: 14px;
+    margin-top: 2px;
+    display: none;
+    color: #B03944;
 }
 .input::placeholder {
     color: #565C62;

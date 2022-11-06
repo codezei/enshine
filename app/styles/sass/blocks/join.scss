@@ -1,0 +1,79 @@
+.join {
+    padding-top: 182px !important;
+    padding-bottom: 172px;
+    background-image: url(../images/dist/join-bg.png);
+    background-position: top center;
+    background-repeat: no-repeat;
+    &__title {
+        margin-bottom: 2rem;
+        text-align: center;
+        max-width: 830px;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+    }
+    &__subtitle {
+        margin-bottom: 80px;
+        max-width: 710px;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+    }
+    @media screen and (max-width: 991px) {
+        padding-top: 122px !important;
+        padding-bottom: 90px;
+        background-image: url(../images/dist/join-bg-md.png);
+        &__subtitle {
+            margin-bottom: 30px
+        }
+    }
+    @media screen and (min-width: 992px) {
+        background-image: url(../images/dist/join-bg-stars.png), url(../images/dist/join-bg.png);
+    }
+
+}
+
+.waitlist {
+    &__form {
+        display: flex;
+        margin-bottom: 16px;
+        max-width: 570px;
+        justify-content: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    &__input {
+        width: 100%;
+        &-wrap {
+            max-width: 384px;
+            width: 100%;
+            margin-right: 11px;
+        }
+    }
+    &__note {
+        text-align: center;
+        color: #8E44AD;
+        font-size: 16px;
+    }
+    &__btn {
+        flex-shrink: 0;
+    }
+
+    @media screen and (max-width: 575px) {
+        &__form {
+            flex-direction: column;
+            max-width: 450px;
+
+        }
+        &__input {
+            &-wrap {
+                margin-right: 0;
+                margin-bottom: 11px;
+                max-width: 100%;
+            }
+        }
+        &__btn {
+            width: 100%;
+        }
+    }
+}
