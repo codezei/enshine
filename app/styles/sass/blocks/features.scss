@@ -1,0 +1,14 @@
+.features {
+    padding-top: 116px;
+    padding-bottom: 90px;
+    &__title {
+        text-align: center;
+        margin-bottom: 6px;
+    }
+    &__item {
+        margin-top: 64px;
+    }
+    &__list {
+        justify-content: center;
+    }
+}

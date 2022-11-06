@@ -1,0 +1,117 @@
+.blog {
+    padding-top: 142px !important;
+    padding-bottom: 80px;
+    background-image: url(../images/dist/blog-bg.png);
+    background-position: top center;
+    background-repeat: no-repeat;
+    &__title {
+        text-align: center;
+        margin-bottom: 1rem;
+    }
+    &__subtitle {
+        text-align: center;
+        margin-bottom: 3rem;
+        max-width: 620px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    &__categories {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        &-btn {
+            font-weight: 600;
+            background: #fff;
+            font-size: 20px;
+            padding: 10px 24px;
+            border: 1px solid #C9D1DA;
+            border-radius: 1000px;
+            margin: 4px;
+            transition: all 400ms;
+            &.active {
+                background: #18191A;
+                color: #fff;
+                border: 1px solid #18191A;
+            }
+            &:before {
+                content: "•";
+                font-size: 24px;
+                line-height: 1;
+                margin-right: 8px;
+                display: inline-block;
+                vertical-align: middle;
+            }
+            &[data-category='all']:before {
+                color:  #18191A;
+            }
+            &[data-category='study']:before {
+                color:  #8E44AD;
+            }
+            &[data-category='educational']:before {
+                color: #B03944;
+            }
+            &[data-category='announcement']:before {
+                color: #D1641E;
+            }
+            &.active::before {
+                color: #fff;
+            }
+            &:hover {
+                background: #18191A;
+                color: #fff;
+                border: 1px solid #18191A;
+            }
+        }
+    }
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    &-item {
+        margin-top: 30px;
+        @media screen and (min-width: 992px) {
+            &--main {
+                width: 100% !important;
+                max-width: 100% !important;
+                margin-left: 0 !important;
+                margin-right: 0 !important;
+                margin-top: 20px;
+                .article-thumbnail {
+                    display: flex;
+                    flex-direction: row-reverse;
+                    &__img {
+                        height: 100%;
+                        width: 50%;
+                    }
+                    &__inner {
+                        width: 50%;
+                        align-self: flex-end;
+                        padding-bottom: 20px;
+                        padding-top: 60px;
+                        height: auto;
+                    }
+                    &__title {
+                        font-size: 40px;
+                    }
+                    &[data-category='study'] .article-thumbnail__category {
+                        background: rgba($color: #8E44AD, $alpha: 0.1);
+                    }
+                    &[data-category='educational'] .article-thumbnail__category {
+                        background: rgba($color: #B03944, $alpha: 0.1);
+                    }
+                    &[data-category='announcement'] .article-thumbnail__category {
+                        background: rgba($color: #D1641E, $alpha: 0.1);
+                    }
+    
+                }
+    
+    
+            }
+        }
+
+
+
+    }
+
+}

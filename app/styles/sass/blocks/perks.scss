@@ -1,0 +1,238 @@
+.perks {
+    padding: 90px 0 155px;
+    &__title {
+        text-align: center;
+        max-width: 800px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    &__subtitle {
+        text-align: center;
+        max-width: 760px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 8px;
+    }
+    &__list {
+        justify-content: center;
+    }
+    &__item {
+        margin-top: 64px;
+    }
+    @media screen and (min-width: 992px) {
+        &__container {
+            position: relative;
+            z-index: 1;
+            &:before {
+                content: "";
+                display: block;
+                width: 553px;
+                height: 694px;
+                background-image: url(../images/dist/perks-bg-1.png);
+                background-size: contain;
+                background-position: center;
+                background-repeat: no-repeat;
+                position: absolute;
+                left: 0;
+                top: 0;
+                transform: translate(-50%, -50%);
+                z-index: -1;
+            }
+            &:after {
+                content: "";
+                display: block;
+                width: 391px;
+                height: 601px;
+                background-image: url(../images/dist/perks-bg-2.png);
+                background-size: contain;
+                background-position: center;
+                background-repeat: no-repeat;
+                position: absolute;
+                right: 0;
+                top: 0;
+                transform: translateX(50%);
+                z-index: -1;
+            }
+        }
+    }
+
+}
+
+.card {
+    text-align: center;
+    box-shadow: 0px 9px 46px rgba(43, 54, 191, 0.05), 0px 2.71324px 13.8677px rgba(43, 54, 191, 0.0325794), 0px 1.12694px 5.75991px rgba(43, 54, 191, 0.025), 0px 0.407592px 2.08325px rgba(43, 54, 191, 0.0174206);
+    position: relative;
+    border-radius: 20px;
+    transition: all 400ms;
+    height: 100%;
+    &:hover {
+        transform: translateY(-10px);
+    }
+
+    &:after {
+        content: "";
+        border: 4px solid #FFFFFF;
+        border-radius: 16px;
+        width: 92px;
+        height: 92px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    &__inner {
+        overflow: hidden;
+        padding: 80px 20px 20px;
+        position: relative;
+        border: 4px solid #FFFFFF;
+        border-radius: 20px;
+        background: #FFFFFF;
+        height: 100%;
+        &:before {
+            display: none;
+            @supports (filter: blur(62px)) {
+                content: "";
+                display: block;
+                width: 100%;
+                height: 290px;
+                opacity: 0.1;
+                filter: blur(62px);
+                position: absolute;
+                top: 0;
+                left: 0;
+                transform: translateY(-60%);
+                pointer-events: none;
+            }
+
+
+        }
+
+    }
+
+    &--purple &__inner {
+        &:before {
+            background-color: #8E44AD;
+        }
+    }
+    &--purple  {
+        &:after {
+            background-color: #8E44AD;
+        }
+    }
+    
+    &--red &__inner {
+        &:before {
+            background-color: #D76D77;
+        }
+    }
+    &--red  {
+        &:after {
+            background-color: #D76D77;
+        }
+    }
+    
+    &--orange &__inner {
+        &:before {
+            background-color: #FFA164;
+        }
+    }
+    &--orange  {
+        &:after {
+            background-color: #FFA164;
+        }
+    }
+    
+    &--green &__inner {
+        &:before {
+            background-color: #3ECB77;
+        }
+    }
+    &--green  {
+        &:after {
+            background-color: #3ECB77;
+        }
+    }
+    &--blue &__inner {
+        &:before {
+            background-color: #399FF8;
+        }
+    }
+    &--blue  {
+        &:after {
+            background-color: #399FF8;
+        }
+    }
+    &--pink &__inner {
+        &:before {
+            background-color:  #FF81A2;
+        }
+    }
+    &--pink  {
+        &:after {
+            background-color:  #FF81A2;
+        }
+    }
+    &--chat {
+        &:after {
+            background-image: url(../images/dist/chat-icon.svg);
+        }
+    }
+    &--discord {
+        &:after {
+            background-image: url(../images/dist/discord-icon.svg);
+        }
+    }
+    &--gift {
+        &:after {
+            background-image: url(../images/dist/gift-icon.svg);
+        }
+    }
+    &--data {
+        &:after {
+            background-image: url(../images/dist/data-icon.svg);
+        }
+    }
+    &--puzzle {
+        &:after {
+            background-image: url(../images/dist/puzzle-icon.svg);
+        }
+    }
+    &--lighting {
+        &:after {
+            background-image: url(../images/dist/lighting-icon.svg);
+        }
+    }
+    &--setting {
+        &:after {
+            background-image: url(../images/dist/setting-icon.svg);
+        }
+    }
+    &--chart {
+        &:after {
+            background-image: url(../images/dist/chart-icon.svg);
+        }
+    }
+    &--diamond {
+        &:after {
+            background-image: url(../images/dist/diamond-icon.svg);
+        }
+    }
+
+    &__title {
+        margin-bottom: 1rem;
+    }
+    &__text {
+        margin-bottom: 0;
+    }
+
+    @media screen and (max-width: 575px) {
+        &__inner {
+            padding-top: 60px;
+        }
+    }
+}
